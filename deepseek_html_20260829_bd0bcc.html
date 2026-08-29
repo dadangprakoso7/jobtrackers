@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 100 Perusahaan Skala Besar di Surabaya & Sidoarjo</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ----------------------------------------------
+                   RESET & BASE
+                ------------------------------------------------ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f4f7fc;
+            color: #1e293b;
+            padding: 0 0 40px 0;
+            line-height: 1.6;
+        }
+
+        /* ----------------------------------------------
+                   HEADER
+                ------------------------------------------------ */
+        .app-header {
+            background: linear-gradient(135deg, #0b2b4a 0%, #1a4b6d 100%);
+            color: #fff;
+            padding: 32px 24px 24px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-header .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .app-header .brand h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .app-header .brand h1 i {
+            color: #facc15;
+            font-size: 1.6rem;
+        }
+
+        .app-header .brand .sub {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            font-weight: 400;
+            margin-top: 2px;
+            letter-spacing: 0.3px;
+        }
+
+        .header-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-actions .search-wrap {
+            position: relative;
+            min-width: 220px;
+        }
+
+        .header-actions .search-wrap i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        .header-actions .search-wrap input {
+            width: 100%;
+            padding: 10px 16px 10px 40px;
+            border: none;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            background: #fff;
+            color: #0f172a;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.2s;
+        }
+
+        .header-actions .search-wrap input:focus {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .header-actions .search-wrap input::placeholder {
+            color: #94a3b8;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 40px;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: #facc15;
+            color: #0b2b4a;
+            border-color: #facc15;
+        }
+
+        .btn-primary:hover {
+            background: #fde047;
+            border-color: #fde047;
+        }
+
+        /* ----------------------------------------------
+                   CONTAINER
+                ------------------------------------------------ */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ----------------------------------------------
+                   STATS BAR
+                ------------------------------------------------ */
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin: 24px 0 20px 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            gap: 12px;
+        }
+
+        .stats-bar .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        .stats-bar .stat-item i {
+            color: #1a4b6d;
+            width: 20px;
+            text-align: center;
+        }
+
+        .stats-bar .stat-item strong {
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #475569;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .filter-group select {
+            padding: 8px 14px;
+            border-radius: 30px;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            font-family: inherit;
+            font-size: 0.85rem;
+            color: #0f172a;
+            cursor: pointer;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .filter-group select:focus {
+            border-color: #1a4b6d;
+        }
+
+        /* ----------------------------------------------
+                   TOP 25 SECTION
+                ------------------------------------------------ */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 40px 0 20px 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0b2b4a;
+        }
+
+        .section-title i {
+            color: #facc15;
+            font-size: 1.8rem;
+        }
+
+        .section-title .badge {
+            background: #1a4b6d;
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 2px 12px;
+            border-radius: 30px;
+            margin-left: 4px;
+        }
+
+        .top25-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+
+        .top25-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 20px 18px 20px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            border: 1px solid #edf2f7;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .top25-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+            border-color: #d0dbe8;
+        }
+
+        .top25-card .rank {
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            background: #facc15;
+            color: #0b2b4a;
+            font-weight: 700;
+            font-size: 0.7rem;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(250, 204, 21, 0.4);
+        }
+
+        .top25-card .company-name {
+            font-weight: 700;
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 2px;
+            padding-right: 8px;
+        }
+
+        .top25-card .company-cat {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .top25-card .meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.8rem;
+            color: #475569;
+            margin-top: 6px;
+        }
+
+        .top25-card .meta i {
+            width: 16px;
+            color: #1a4b6d;
+        }
+
+        .top25-card .stars {
+            color: #facc15;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .top25-card .stars .empty {
+            color: #d1d5db;
+        }
+
+        .top25-card .reason {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #e2e8f0;
+            font-size: 0.78rem;
+            color: #475569;
+            display: flex;
+            align-items: flex-start;
+            gap: 6px;
+        }
+
+        .top25-card .reason i {
+            color: #facc15;
+            font-size: 0.7rem;
+            margin-top: 2px;
+        }
+
+        /* ----------------------------------------------
+                   TABLE WRAPPER
+                ------------------------------------------------ */
+        .table-wrap {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            border: 1px solid #edf2f7;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            min-width: 820px;
+        }
+
+        thead {
+            background: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        thead th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #475569;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+            position: sticky;
+            top: 0;
+            background: #f8fafc;
+            z-index: 2;
+        }
+
+        thead th i {
+            margin-left: 4px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+        }
+
+        thead th:hover {
+            color: #0b2b4a;
+        }
+
+        thead th.sorted i {
+            opacity: 1;
+            color: #1a4b6d;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.1s;
+        }
+
+        tbody tr:hover {
+            background: #fafcff;
+        }
+
+        tbody td {
+            padding: 12px 16px;
+            vertical-align: middle;
+            color: #1e293b;
+        }
+
+        tbody td .company-cell {
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        tbody td .category-tag {
+            display: inline-block;
+            background: #eef2ff;
+            color: #1e40af;
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        tbody td .dist {
+            font-weight: 500;
+            color: #334155;
+        }
+
+        tbody td .stars-sm {
+            color: #facc15;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        tbody td .stars-sm .empty {
+            color: #d1d5db;
+        }
+
+        tbody td .contact-info {
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.4;
+        }
+
+        tbody td .contact-info a {
+            color: #1a4b6d;
+            text-decoration: none;
+        }
+
+        tbody td .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        tbody td .website-link {
+            color: #1a4b6d;
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+
+        tbody td .website-link:hover {
+            text-decoration: underline;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px 20px !important;
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        .no-data i {
+            font-size: 2.4rem;
+            display: block;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        /* ----------------------------------------------
+                   FOOTER
+                ------------------------------------------------ */
+        .footer-note {
+            margin-top: 32px;
+            padding: 20px 24px;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #edf2f7;
+            font-size: 0.8rem;
+            color: #64748b;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .footer-note i {
+            color: #facc15;
+        }
+
+        .footer-note a {
+            color: #1a4b6d;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        /* ----------------------------------------------
+                   RESPONSIVE
+                ------------------------------------------------ */
+        @media (max-width: 900px) {
+            .app-header .container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .header-actions .search-wrap {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .filter-group {
+                flex-wrap: wrap;
+            }
+
+            .top25-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            table {
+                font-size: 0.78rem;
+                min-width: 700px;
+            }
+
+            thead th,
+            tbody td {
+                padding: 10px 12px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .app-header .brand h1 {
+                font-size: 1.2rem;
+            }
+
+            .top25-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 12px;
+            }
+
+            .stats-bar .stat-item {
+                font-size: 0.78rem;
+            }
+        }
+
+        /* ----------------------------------------------
+                   UTILITIES
+                ------------------------------------------------ */
+        .text-muted {
+            color: #94a3b8;
+        }
+
+        .gap-1 {
+            gap: 4px;
+        }
+
+        .fw-600 {
+            font-weight: 600;
+        }
+
+        .mt-8 {
+            margin-top: 8px;
+        }
+
+        /* Scrollbar styling */
+        .table-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .table-scroll::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+
+        .table-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ============================================
+    HEADER
+    ============================================ -->
+    <header class="app-header">
+        <div class="container">
+            <div class="brand">
+                <h1>
+                    <i class="fas fa-building"></i>
+                    Top 100 Perusahaan Surabaya
+                </h1>
+                <div class="sub">
+                    <i class="fas fa-map-pin"></i> Acuan: Tegalsari &bull; <i class="fas fa-industry"></i> Data kawasan SIER &amp; Sidoarjo
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="search-wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Cari nama, kategori, lokasi..." />
+                </div>
+                <button class="btn btn-primary" id="resetBtn">
+                    <i class="fas fa-undo-alt"></i> Reset
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ============================================
+    MAIN CONTENT
+    ============================================ -->
+    <div class="container">
+
+        <!-- STATS -->
+        <div class="stats-bar" id="statsBar">
+            <div class="stat-item">
+                <i class="fas fa-flag"></i> <strong id="totalCount">100</strong> Perusahaan
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-star"></i> Rating rata-rata: <strong id="avgRating">4.3</strong>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-route"></i> Jarak rata-rata: <strong id="avgDist">12,1</strong> km
+            </div>
+            <div class="filter-group">
+                <label><i class="fas fa-sort"></i> Urutkan:</label>
+                <select id="sortSelect">
+                    <option value="distance">📍 Terdekat</option>
+                    <option value="rating">⭐ Rating Terbaik</option>
+                    <option value="name">🔤 Nama (A-Z)</option>
+                    <option value="category">📂 Kategori (A-Z)</option>
+                </select>
+                <label style="margin-left:4px;"><i class="fas fa-filter"></i> Kategori:</label>
+                <select id="categoryFilter">
+                    <option value="all">Semua</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- TOP 25 RECOMMENDATIONS -->
+        <div class="section-title">
+            <i class="fas fa-crown"></i> Top 25 Rekomendasi
+            <span class="badge">⭐ Pilihan Terbaik</span>
+        </div>
+        <div class="top25-grid" id="top25Grid">
+            <!-- diisi JS -->
+        </div>
+
+        <!-- TABLE -->
+        <div class="section-title" style="margin-top:24px;">
+            <i class="fas fa-table"></i> Daftar Lengkap Perusahaan
+            <span class="badge" id="resultCountBadge">100</span>
+        </div>
+        <div class="table-wrap">
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th data-sort="no">#</th>
+                            <th data-sort="name">Nama <i class="fas fa-sort"></i></th>
+                            <th data-sort="category">Kategori <i class="fas fa-sort"></i></th>
+                            <th data-sort="location">Lokasi <i class="fas fa-sort"></i></th>
+                            <th data-sort="distance">Jarak <i class="fas fa-sort"></i></th>
+                            <th data-sort="rating">Rating <i class="fas fa-sort"></i></th>
+                            <th>Kontak / Web</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- diisi JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer-note">
+            <span>
+                <i class="fas fa-info-circle"></i> Data dihimpun dari direktori industri &amp; sumber publik.
+                Untuk keperluan akurat, cek ulang via Google Maps atau situs resmi perusahaan.
+            </span>
+            <span>
+                <i class="fas fa-sync-alt"></i> Perbarui: 2026 &bull; <i class="fas fa-map-marked-alt"></i> 100+ entri
+            </span>
+        </div>
+    </div>
+
+    <!-- ============================================
+    JAVASCRIPT
+    ============================================ -->
+    <script>
+        (function() {
+
+            // ----------------------------------------------
+            // DATA (100 perusahaan)
+            // ----------------------------------------------
+            const companies = [{
+                no: 1,
+                name: "PT Unilever Indonesia Tbk",
+                category: "Kosmetik & Personal Care",
+                location: "Jl. Rungkut Industri IV/5-11, Surabaya",
+                email: "–",
+                phone: "031-8438611",
+                website: "unilever.co.id",
+                distance: 11,
+                rating: 4.8
+            }, {
+                no: 2,
+                name: "PT HM Sampoerna Tbk (Plant Rungkut)",
+                category: "Rokok Kretek",
+                location: "Jl. Rungkut Industri Raya 16-18, Surabaya",
+                email: "–",
+                phone: "031-8431699",
+                website: "sampoerna.com",
+                distance: 11,
+                rating: 4.7
+            }, {
+                no: 3,
+                name: "PT Bayer Indonesia",
+                category: "Farmasi & Agrokimia",
+                location: "Jl. Rungkut Industri I/12, Surabaya",
+                email: "–",
+                phone: "031-8438627",
+                website: "bayer.co.id",
+                distance: 11,
+                rating: 4.6
+            }, {
+                no: 4,
+                name: "PT Campina Ice Cream Industry Tbk",
+                category: "Es Krim",
+                location: "Jl. Rungkut Industri II/15, Surabaya",
+                email: "–",
+                phone: "031-8432247",
+                website: "campina.co.id",
+                distance: 11,
+                rating: 4.5
+            }, {
+                no: 5,
+                name: "PT Catur Putra Surya (Alexandre Christie)",
+                category: "Jam Tangan",
+                location: "Jl. Rungkut Industri III/36-38, Surabaya",
+                email: "–",
+                phone: "031-8430652",
+                website: "alexandrechristie.com",
+                distance: 11,
+                rating: 4.2
+            }, {
+                no: 6,
+                name: "PT Sukanda Djaya (Diamond)",
+                category: "Es Krim & Produk Susu",
+                location: "Jl. Rungkut Industri III/49A, Surabaya",
+                email: "sbyrecruitment@diamond.co.id",
+                phone: "–",
+                website: "diamond.co.id",
+                distance: 11,
+                rating: 4.4
+            }, {
+                no: 7,
+                name: "PT Spindo (Steel Pipe Industry of Indonesia) Tbk",
+                category: "Pipa Baja",
+                location: "Jl. Rungkut Industri I/28-30, Surabaya",
+                email: "–",
+                phone: "031-8433641",
+                website: "spindo.com",
+                distance: 11,
+                rating: 4.3
+            }, {
+                no: 8,
+                name: "PT Kedaung Indah Can Tbk",
+                category: "Kaleng & Peralatan Rumah Tangga",
+                location: "Jl. Raya Rungkut 15-17, Surabaya",
+                email: "–",
+                phone: "031-8700006",
+                website: "kedaungindahcan.com",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 9,
+                name: "PT Fast Food Indonesia Tbk (KFC)",
+                category: "Restoran Cepat Saji",
+                location: "Jl. Rungkut Industri VIII/8, Surabaya",
+                email: "–",
+                phone: "031-8416497",
+                website: "fastfoodindonesia.co.id",
+                distance: 11,
+                rating: 4.6
+            }, {
+                no: 10,
+                name: "PT Vitapharm (Viva Cosmetics)",
+                category: "Kosmetik",
+                location: "Surabaya",
+                email: "–",
+                phone: "–",
+                website: "vivacosmetics.com",
+                distance: 9,
+                rating: 4.3
+            }, {
+                no: 11,
+                name: "PT Abadi Adi Mulia",
+                category: "Botol Plastik",
+                location: "Jl. Rungkut Industri I/14, Surabaya",
+                email: "–",
+                phone: "031-8439456",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 12,
+                name: "PT Aditama Raya Farmindo",
+                category: "Farmasi",
+                location: "Jl. Rungkut Industri II/45C, Surabaya",
+                email: "–",
+                phone: "031-8412522",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 13,
+                name: "PT Aktif Indonesia Indah",
+                category: "Kimia",
+                location: "Jl. Rungkut Industri III/64, Surabaya",
+                email: "–",
+                phone: "031-8438552",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 14,
+                name: "PT Akzo Nobel Raung Resins",
+                category: "Resin",
+                location: "Jl. Rungkut Industri II/47, Surabaya",
+                email: "–",
+                phone: "031-8420391",
+                website: "akzonobel.com",
+                distance: 11,
+                rating: 4.2
+            }, {
+                no: 15,
+                name: "PT Alam Lestari Unggul",
+                category: "Kemasan",
+                location: "Jl. Rungkut Industri III/6, Surabaya",
+                email: "–",
+                phone: "–",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 16,
+                name: "PT Almichos",
+                category: "Kaleng Tinplate",
+                location: "Jl. Rungkut Industri III/33, Surabaya",
+                email: "–",
+                phone: "031-8439288",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 17,
+                name: "PT Alsindo Plastec",
+                category: "Plastik",
+                location: "Jl. Rungkut Industri VIII/16, Surabaya",
+                email: "–",
+                phone: "031-8493766",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 18,
+                name: "PT Arjuna Utama Kimia (Aruki)",
+                category: "Kimia",
+                location: "Jl. Rungkut Industri I/18-22, Surabaya",
+                email: "–",
+                phone: "031-8431646",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 19,
+                name: "PT Artotoyo Utama",
+                category: "Kemasan Plastik",
+                location: "Jl. Rungkut Industri IV/28, Surabaya",
+                email: "–",
+                phone: "031-8420136",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 20,
+                name: "PT Asia Sejahtera Pharmaceutical",
+                category: "Farmasi",
+                location: "Jl. Rungkut Industri II/21, Surabaya",
+                email: "–",
+                phone: "031-8438775",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 21,
+                name: "PT Bambang Djaya",
+                category: "Transformator",
+                location: "Jl. Rungkut Industri III/56, Surabaya",
+                email: "–",
+                phone: "031-8438703",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 22,
+                name: "PT Bintang Adya Pastika Glass",
+                category: "Kaca Lembaran",
+                location: "Jl. Rungkut Industri X/3, Surabaya",
+                email: "–",
+                phone: "031-8437164",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 23,
+                name: "PT Buana Label Indah",
+                category: "Label",
+                location: "Jl. Rungkut Industri XII/2, Surabaya",
+                email: "–",
+                phone: "031-8412234",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 24,
+                name: "PT Carbon & Electric",
+                category: "Karbon Brush",
+                location: "Jl. Raya Rungkut 30, Surabaya",
+                email: "–",
+                phone: "031-8437456",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 25,
+                name: "PT Cipta Indah",
+                category: "Cetak Kaleng",
+                location: "Jl. Rungkut Industri III/61, Surabaya",
+                email: "–",
+                phone: "031-8495850",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 26,
+                name: "PT Classic Prima Carpet Industry",
+                category: "Karpet",
+                location: "Jl. Rungkut Industri II/39, Surabaya",
+                email: "–",
+                phone: "031-8438331",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 27,
+                name: "PT Conbat",
+                category: "Baterai",
+                location: "Jl. Rungkut Industri III/6, Surabaya",
+                email: "–",
+                phone: "031-8430575",
+                website: "–",
+                distance: 11,
+                rating: 3.7
+            }, {
+                no: 28,
+                name: "PT Damai Sentosa Cooking Oil",
+                category: "Minyak Goreng",
+                location: "Jl. Rungkut Industri IV/21, Surabaya",
+                email: "–",
+                phone: "031-8438238",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 29,
+                name: "PT Der Kwei Kemasan Indah Indonesia",
+                category: "Botol Kosmetik",
+                location: "Jl. Rungkut Industri IV/23, Surabaya",
+                email: "–",
+                phone: "031-8438939",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 30,
+                name: "PT Dura Farma Jaya",
+                category: "Farmasi",
+                location: "Jl. Rungkut Industri III/66, Surabaya",
+                email: "–",
+                phone: "031-8439617",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 31,
+                name: "PT Duta Budi Tulus Rejo",
+                category: "Biji Plastik",
+                location: "Jl. Rungkut Industri III/47, Surabaya",
+                email: "–",
+                phone: "031-8438834",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 32,
+                name: "PT Erkafa",
+                category: "Alat Listrik",
+                location: "Jl. Rungkut Industri IV/14, Surabaya",
+                email: "–",
+                phone: "031-8439382",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 33,
+                name: "PT Garuda Top Plasindo",
+                category: "Plastik",
+                location: "Jl. Rungkut Industri III/17, Surabaya",
+                email: "–",
+                phone: "031-8417950",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 34,
+                name: "PT Hari Terang",
+                category: "Baterai Kering",
+                location: "Jl. Rungkut Industri II/12, Surabaya",
+                email: "–",
+                phone: "031-8438276",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 35,
+                name: "PT Hasil Abadi Perdana",
+                category: "Minyak Goreng",
+                location: "Jl. Rungkut Industri II/8, Surabaya",
+                email: "–",
+                phone: "031-8437711",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 36,
+                name: "PT Henson Makmur",
+                category: "Jus/Sari Buah",
+                location: "Jl. Rungkut Industri II/1, Surabaya",
+                email: "–",
+                phone: "031-8418941",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 37,
+                name: "PT Impact Indonesia",
+                category: "Aluminium Tube",
+                location: "Jl. Rungkut Industri IV/18A, Surabaya",
+                email: "–",
+                phone: "031-8430276",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 38,
+                name: "PT Indonesia Multicolour Printing",
+                category: "Kemasan Kaleng",
+                location: "Jl. Rungkut Industri I/10, Surabaya",
+                email: "–",
+                phone: "031-8438702",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 39,
+                name: "PT Inti Duta Lestari",
+                category: "Sprayer Plastik",
+                location: "Jl. Rungkut Industri III/29, Surabaya",
+                email: "–",
+                phone: "031-8436717",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 40,
+                name: "PT Itamaraya Gold Industri",
+                category: "Perhiasan",
+                location: "Jl. Rungkut Industri II/45, Surabaya",
+                email: "–",
+                phone: "031-8439447",
+                website: "–",
+                distance: 11,
+                rating: 4.2
+            }, {
+                no: 41,
+                name: "PT Jadi Abadi Corak Biscuit",
+                category: "Biskuit",
+                location: "Jl. Raya Kali Rungkut 7-9, Surabaya",
+                email: "–",
+                phone: "031-8700578",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 42,
+                name: "PT Juara Sakti",
+                category: "Aki/Accu",
+                location: "Jl. Rungkut Industri II/23, Surabaya",
+                email: "–",
+                phone: "031-8438012",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 43,
+                name: "PT Kalimantan Steel Co Ltd",
+                category: "Baja Lapis Seng",
+                location: "Jl. Rungkut Industri Raya 17, Surabaya",
+                email: "–",
+                phone: "031-8488170",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 44,
+                name: "PT Karya Bakti Metalasri",
+                category: "Drum Logam",
+                location: "Jl. Rungkut Industri III/28A-30, Surabaya",
+                email: "–",
+                phone: "031-8438098",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 45,
+                name: "PT Karya Mas Jaya",
+                category: "Pintu",
+                location: "Jl. Rungkut Industri III/24, Surabaya",
+                email: "–",
+                phone: "031-8438273",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 46,
+                name: "PT Ketabangkali Electronics Industries",
+                category: "Elektronik",
+                location: "Jl. Rungkut Industri IV/40, Surabaya",
+                email: "–",
+                phone: "031-8438320",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 47,
+                name: "PT Krisanthium Offset Printing",
+                category: "Percetakan",
+                location: "Jl. Rungkut Industri III/19, Surabaya",
+                email: "–",
+                phone: "031-8438096",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 48,
+                name: "PT Lentera Wahana Industri",
+                category: "Perhiasan Logam",
+                location: "Jl. Rungkut Industri III/42, Surabaya",
+                email: "–",
+                phone: "031-8431334",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 49,
+                name: "PT Lotus Indah Textile Industries",
+                category: "Tekstil",
+                location: "Jl. Kedung Asem No.1, Kedung Baruk, Rungkut, Surabaya",
+                email: "–",
+                phone: "031-8706348",
+                website: "lotusindah.com",
+                distance: 12,
+                rating: 4.1
+            }, {
+                no: 50,
+                name: "PT Maju Warna Steel",
+                category: "Komponen Mesin",
+                location: "Jl. Rungkut Industri III/45, Surabaya",
+                email: "–",
+                phone: "031-8436928",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 51,
+                name: "PT Mandala Intergrafika",
+                category: "Percetakan",
+                location: "Jl. Rungkut Industri VIII/29, Surabaya",
+                email: "–",
+                phone: "031-8439310",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 52,
+                name: "PT MHE Dewana Indonesia",
+                category: "Crane & Hoist",
+                location: "Jl. Rungkut Industri I/3, Surabaya",
+                email: "–",
+                phone: "031-8432900",
+                website: "mhe-demag.co.id",
+                distance: 11,
+                rating: 4.2
+            }, {
+                no: 53,
+                name: "PT Mikatasa Agung",
+                category: "Lem Pipa Paralon",
+                location: "Jl. Rungkut Industri II/2, Surabaya",
+                email: "–",
+                phone: "031-8438427",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 54,
+                name: "PT Mulcindo",
+                category: "Seng & Galvanis",
+                location: "Jl. Rungkut Industri II/6, Surabaya",
+                email: "–",
+                phone: "031-8438165",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 55,
+                name: "PT Naga Sakti Makmur",
+                category: "Biji Plastik",
+                location: "Jl. Rungkut Industri I/31-33, Surabaya",
+                email: "–",
+                phone: "031-8418452",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 56,
+                name: "PT Norton Hamplas Indonesia",
+                category: "Amplas",
+                location: "Jl. Rungkut Industri IV/22, Surabaya",
+                email: "–",
+                phone: "031-8433006",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 57,
+                name: "PT Obor Kencana Prima",
+                category: "Jasa Pembubutan",
+                location: "Jl. Rungkut Industri II/79, Surabaya",
+                email: "–",
+                phone: "031-8436529",
+                website: "–",
+                distance: 11,
+                rating: 3.7
+            }, {
+                no: 58,
+                name: "PT Ometraco Arya Samantha",
+                category: "Besi Baja & Pelat",
+                location: "Jl. Rungkut Industri I/5-7, Surabaya",
+                email: "–",
+                phone: "031-8432836",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 59,
+                name: "PT Rita Sinar Indah",
+                category: "Kosmetik & Pasta Gigi",
+                location: "Jl. Rungkut Industri IV/24, Surabaya",
+                email: "–",
+                phone: "031-8416125",
+                website: "–",
+                distance: 11,
+                rating: 4.2
+            }, {
+                no: 60,
+                name: "PT Rungkut Cahaya",
+                category: "Isolasi Listrik",
+                location: "Jl. Rungkut Industri IV/6, Surabaya",
+                email: "–",
+                phone: "031-8439013",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 61,
+                name: "PT Sepanjang Agung Industrial Co Ltd",
+                category: "Termos Panas",
+                location: "Jl. Rungkut Industri III/14, Surabaya",
+                email: "–",
+                phone: "031-8431319",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 62,
+                name: "PT Sinar Merbabu",
+                category: "Kabel Listrik",
+                location: "Jl. Rungkut Industri Raya 17-A, Surabaya",
+                email: "–",
+                phone: "031-8438562",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 63,
+                name: "PT Smart Corporation",
+                category: "Minyak Goreng & Margarin",
+                location: "Jl. Raya Rungkut Industri 19, Surabaya",
+                email: "–",
+                phone: "031-8439861",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 64,
+                name: "PT Surawangi",
+                category: "Penyamakan Kulit",
+                location: "Jl. Rungkut Industri III/58, Surabaya",
+                email: "–",
+                phone: "031-8432502",
+                website: "–",
+                distance: 11,
+                rating: 3.8
+            }, {
+                no: 65,
+                name: "PT Surya Dermato Medica Laboratories (Ristra)",
+                category: "Farmasi & Kosmetik",
+                location: "Jl. Rungkut Industri III/31, Surabaya",
+                email: "–",
+                phone: "031-8493209",
+                website: "ristra.co.id",
+                distance: 11,
+                rating: 4.3
+            }, {
+                no: 66,
+                name: "PT Surya Multi Indopack",
+                category: "Kemasan Fleksibel",
+                location: "Jl. Rungkut Industri XIV/4, Surabaya",
+                email: "–",
+                phone: "031-8436693",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 67,
+                name: "PT Teja Sekawan Cocoa Industries",
+                category: "Cocoa Butter",
+                location: "Jl. Rungkut Industri II/27, Surabaya",
+                email: "–",
+                phone: "031-8439118",
+                website: "–",
+                distance: 11,
+                rating: 4.0
+            }, {
+                no: 68,
+                name: "PT Tirta Mas Megah",
+                category: "Jamu Tradisional",
+                location: "Jl. Rungkut Industri I/6, Surabaya",
+                email: "–",
+                phone: "031-8438523",
+                website: "–",
+                distance: 11,
+                rating: 4.1
+            }, {
+                no: 69,
+                name: "PT Wirifa Sakti",
+                category: "Pakan Ternak",
+                location: "Jl. Rungkut Industri III/48B, Surabaya",
+                email: "–",
+                phone: "031-8438136",
+                website: "–",
+                distance: 11,
+                rating: 3.9
+            }, {
+                no: 70,
+                name: "PT Rembaka",
+                category: "Kosmetik",
+                location: "Jl. Rungkut Industri VIII/26-28 / Berbek Industri VII/4, Sidoarjo",
+                email: "–",
+                phone: "031-8412622",
+                website: "–",
+                distance: 10,
+                rating: 4.0
+            }, {
+                no: 71,
+                name: "PT Apie Indo Karunia",
+                category: "Mur & Baut",
+                location: "Jl. Berbek Industri II/3, Waru, Sidoarjo",
+                email: "–",
+                phone: "031-8432135",
+                website: "–",
+                distance: 9,
+                rating: 3.9
+            }, {
+                no: 72,
+                name: "PT Alam Dianraya",
+                category: "Percetakan",
+                location: "Jl. Berbek Industri III/7-11, Waru, Sidoarjo",
+                email: "–",
+                phone: "031-8432140",
+                website: "–",
+                distance: 9,
+                rating: 3.8
+            }, {
+                no: 73,
+                name: "PT Filtrona Indonesia",
+                category: "Filter Rokok",
+                location: "Kawasan Industri Berbek, Waru, Sidoarjo",
+                email: "–",
+                phone: "–",
+                website: "filtrona.com",
+                distance: 9,
+                rating: 4.2
+            }, {
+                no: 74,
+                name: "PT Maspion (Unit I)",
+                category: "Alat Rumah Tangga Logam/Melamine",
+                location: "Ds. Sawotratap, Gedangan, Sidoarjo",
+                email: "mspunit1@maspion.com",
+                phone: "031-8531531",
+                website: "maspion.com",
+                distance: 17,
+                rating: 4.5
+            }, {
+                no: 75,
+                name: "PT Maspion (Unit II)",
+                category: "Elektronik & Aluminium",
+                location: "Ds. Banjar Kemantren, Buduran, Sidoarjo",
+                email: "mspunit2@maspion.com",
+                phone: "031-8913351",
+                website: "maspion.com",
+                distance: 18,
+                rating: 4.4
+            }, {
+                no: 76,
+                name: "PT Maspion (Unit III)",
+                category: "Plastik & PVC",
+                location: "Ds. Sruni, Gedangan, Sidoarjo",
+                email: "mspunit3@maspion.com",
+                phone: "031-8913571",
+                website: "maspion.com",
+                distance: 17,
+                rating: 4.3
+            }, {
+                no: 77,
+                name: "PT Maspion Head Office",
+                category: "Kantor Pusat Grup",
+                location: "Jl. Kembang Jepun 38-40, Surabaya",
+                email: "info.hq@maspion.com",
+                phone: "031-3530333",
+                website: "maspion.com",
+                distance: 3,
+                rating: 4.6
+            }, {
+                no: 78,
+                name: "PT Alumindo Light Metal Industry Tbk",
+                category: "Aluminium Sheet & Foil",
+                location: "Sawotratap, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-8531531",
+                website: "almi.co.id",
+                distance: 17,
+                rating: 4.3
+            }, {
+                no: 79,
+                name: "PT Indal Aluminium Industry Tbk",
+                category: "Aluminium Ekstrusi",
+                location: "Sawotratap, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-8531531",
+                website: "indal.co.id",
+                distance: 17,
+                rating: 4.2
+            }, {
+                no: 80,
+                name: "PT Bank Maspion Indonesia Tbk",
+                category: "Perbankan",
+                location: "Jl. Basuki Rahmat, Surabaya",
+                email: "–",
+                phone: "031-5324743",
+                website: "bankmaspion.co.id",
+                distance: 3,
+                rating: 4.5
+            }, {
+                no: 81,
+                name: "PT Japfa Comfeed Indonesia Tbk",
+                category: "Pakan Ternak & Peternakan",
+                location: "Buduran, Sidoarjo",
+                email: "–",
+                phone: "031-8961647",
+                website: "japfa.com",
+                distance: 18,
+                rating: 4.6
+            }, {
+                no: 82,
+                name: "PT Avia Avian (Avian Brands)",
+                category: "Cat & Pelapis",
+                location: "Sedati/Buduran, Sidoarjo",
+                email: "–",
+                phone: "031-8911145",
+                website: "avianbrands.com",
+                distance: 19,
+                rating: 4.7
+            }, {
+                no: 83,
+                name: "PT Langgeng Makmur Industri Tbk",
+                category: "Peralatan Rumah Tangga Plastik",
+                location: "Jl. Raya Buduran Km.19, Buduran, Sidoarjo",
+                email: "–",
+                phone: "031-8961055",
+                website: "lmi.co.id",
+                distance: 19,
+                rating: 4.3
+            }, {
+                no: 84,
+                name: "PT Produsen Gedangan Permai",
+                category: "Manufaktur Umum",
+                location: "Jl. Gatot Subroto, Ds. Tebel, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-77770663",
+                website: "–",
+                distance: 16,
+                rating: 3.9
+            }, {
+                no: 85,
+                name: "PT Mega Pita Indonesia",
+                category: "Percetakan Pita/Label",
+                location: "Pergudangan Sinar Gedangan Blok D/2, Sidoarjo",
+                email: "–",
+                phone: "031-8013117",
+                website: "–",
+                distance: 16,
+                rating: 3.8
+            }, {
+                no: 86,
+                name: "PT Star Cemerlang Indonesia",
+                category: "Elektronik",
+                location: "Jl. Wedi Blok B/53, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-8014689",
+                website: "–",
+                distance: 16,
+                rating: 4.0
+            }, {
+                no: 87,
+                name: "PT Hidup Makmur Lestari Abadi",
+                category: "Manufaktur/Pergudangan",
+                location: "Jl. Wedi Blok C/72, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-8014558",
+                website: "–",
+                distance: 16,
+                rating: 3.8
+            }, {
+                no: 88,
+                name: "PT Bintang Terang Gemilang",
+                category: "Pakan Ternak",
+                location: "Jl. Raya Tebel Km 3,8, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-8918308",
+                website: "–",
+                distance: 16,
+                rating: 3.9
+            }, {
+                no: 89,
+                name: "PT Dwi Selo Giri Mas",
+                category: "Manufaktur",
+                location: "Jl. Raya Tebel No.50-A, Gedangan, Sidoarjo",
+                email: "–",
+                phone: "031-8913030",
+                website: "–",
+                distance: 16,
+                rating: 3.8
+            }, {
+                no: 90,
+                name: "PT Nasional Sispoly Indonesia",
+                category: "Kimia & Plastik",
+                location: "Kawasan Industri Gedangan, Sidoarjo",
+                email: "–",
+                phone: "–",
+                website: "–",
+                distance: 16,
+                rating: 3.9
+            }, {
+                no: 91,
+                name: "PT Wings Surya",
+                category: "FMCG (Sabun, Deterjen)",
+                location: "Jl. Kalianak/Margomulyo, Surabaya",
+                email: "–",
+                phone: "031-7482111",
+                website: "wingscorp.com",
+                distance: 9,
+                rating: 4.6
+            }, {
+                no: 92,
+                name: "PT Charoen Pokphand Indonesia Tbk",
+                category: "Pakan Ternak & Peternakan",
+                location: "Sepanjang/Krian, Sidoarjo",
+                email: "–",
+                phone: "031-7881388",
+                website: "cp.co.id",
+                distance: 14,
+                rating: 4.7
+            }, {
+                no: 93,
+                name: "PT Santos Jaya Abadi (Kapal Api Group)",
+                category: "Kopi & Minuman Olahan",
+                location: "Sepanjang, Taman, Sidoarjo",
+                email: "–",
+                phone: "031-7881388",
+                website: "kapalapi.co.id",
+                distance: 13,
+                rating: 4.5
+            }, {
+                no: 94,
+                name: "PT Wonokoyo Jaya Corporindo",
+                category: "Peternakan & Pakan Ternak",
+                location: "Krian, Sidoarjo",
+                email: "–",
+                phone: "031-8971800",
+                website: "wonokoyo.com",
+                distance: 27,
+                rating: 4.2
+            }, {
+                no: 95,
+                name: "PT Barata Indonesia (Persero)",
+                category: "Alat Berat & Konstruksi Baja",
+                location: "Jl. Ngagel No.109, Surabaya",
+                email: "–",
+                phone: "031-5031841",
+                website: "barata.co.id",
+                distance: 4,
+                rating: 4.4
+            }, {
+                no: 96,
+                name: "PT Boma Bisma Indra (Persero)",
+                category: "Manufaktur Mesin",
+                location: "Jl. Ngagel No.109, Surabaya",
+                email: "–",
+                phone: "031-5031771",
+                website: "bbi-indonesia.co.id",
+                distance: 4,
+                rating: 4.3
+            }, {
+                no: 97,
+                name: "PT PAL Indonesia (Persero)",
+                category: "Galangan Kapal & Alat Pertahanan",
+                location: "Jl. Ujung, Surabaya",
+                email: "–",
+                phone: "031-3292275",
+                website: "pal.co.id",
+                distance: 7,
+                rating: 4.8
+            }, {
+                no: 98,
+                name: "PT Pelabuhan Indonesia (Persero) Regional Jawa Timur",
+                category: "Jasa Kepelabuhanan",
+                location: "Jl. Perak Timur, Surabaya",
+                email: "–",
+                phone: "031-3298631",
+                website: "pelindo.co.id",
+                distance: 7,
+                rating: 4.5
+            }, {
+                no: 99,
+                name: "PT Perkebunan Nusantara X (Persero)",
+                category: "Perkebunan Tebu & Gula",
+                location: "Jl. Jembatan Merah No.3-5, Surabaya",
+                email: "–",
+                phone: "031-3523143",
+                website: "ptpn10.co.id",
+                distance: 3,
+                rating: 4.3
+            }, {
+                no: 100,
+                name: "PT Pabrik Kertas Indonesia (Pakerin)",
+                category: "Pulp & Kertas",
+                location: "Surabaya",
+                email: "–",
+                phone: "–",
+                website: "pakerin.co.id",
+                distance: 10,
+                rating: 4.4
+            }];
+
+            // ----------------------------------------------
+            // TOP 25 REKOMENDASI (pilihan berdasarkan rating + reputasi)
+            // ----------------------------------------------
+            const top25Ids = [1, 2, 3, 4, 6, 7, 9, 77, 80, 81, 82, 91, 92, 93, 97, 98, 95, 96, 74, 75, 76, 78, 79, 83, 100];
+            const top25Data = top25Ids.map(id => companies.find(c => c.no === id)).filter(Boolean);
+
+            // alasan rekomendasi
+            const reasons = {
+                1: "Pemimpin pasar kosmetik & FMCG global.",
+                2: "Salah satu pabrik rokok terbesar di Indonesia.",
+                3: "Perusahaan farmasi & agrokimia kelas dunia.",
+                4: "Merek es krim favorit dengan standar tinggi.",
+                6: "Produsen es krim Diamond yang ikonik.",
+                7: "Pipa baja terkemuka untuk infrastruktur.",
+                9: "Jaringan restoran cepat saji terbesar di RI.",
+                77: "Kantor pusat Maspion, konglomerat Surabaya.",
+                80: "Bank lokal yang stabil dan terpercaya.",
+                81: "Pakan ternak & peternakan terintegrasi.",
+                82: "Cat Avian, merek nasional yang kuat.",
+                91: "FMCG Wings Group, produk sehari-hari.",
+                92: "Charoen Pokphand, peternakan raksasa.",
+                93: "Kapal Api Group, penguasa kopi lokal.",
+                97: "Galangan kapal & pertahanan BUMN.",
+                98: "Pelindo, pengelola pelabuhan strategis.",
+                95: "BUMN alat berat & konstruksi.",
+                96: "Manufaktur mesin industri BUMN.",
+                74: "Unit Maspion I, peralatan rumah tangga.",
+                75: "Unit Maspion II, elektronik & aluminium.",
+                76: "Unit Maspion III, plastik & PVC.",
+                78: "Alumindo, aluminium sheet terkemuka.",
+                79: "Indal, ekstrusi aluminium berkualitas.",
+                83: "Langgeng Makmur, peralatan plastik rumah tangga.",
+                100: "Pabrik kertas terbesar di Jawa Timur."
+            };
+
+            // ----------------------------------------------
+            // DOM REFS
+            // ----------------------------------------------
+            const searchInput = document.getElementById('searchInput');
+            const resetBtn = document.getElementById('resetBtn');
+            const sortSelect = document.getElementById('sortSelect');
+            const categoryFilter = document.getElementById('categoryFilter');
+            const tableBody = document.getElementById('tableBody');
+            const top25Grid = document.getElementById('top25Grid');
+            const totalCount = document.getElementById('totalCount');
+            const avgRating = document.getElementById('avgRating');
+            const avgDist = document.getElementById('avgDist');
+            const resultCountBadge = document.getElementById('resultCountBadge');
+
+            // ----------------------------------------------
+            // HELPERS
+            // ----------------------------------------------
+            function renderStars(rating) {
+                const full = Math.floor(rating);
+                const half = rating - full >= 0.5 ? 1 : 0;
+                let html = '';
+                for (let i = 0; i < full; i++) html += '<i class="fas fa-star"></i>';
+                if (half) html += '<i class="fas fa-star-half-alt"></i>';
+                const empty = 5 - full - half;
+                for (let i = 0; i < empty; i++) html += '<i class="fas fa-star empty"></i>';
+                return html;
+            }
+
+            function renderStarsSmall(rating) {
+                const full = Math.floor(rating);
+                const half = rating - full >= 0.5 ? 1 : 0;
+                let html = '';
+                for (let i = 0; i < full; i++) html += '<i class="fas fa-star"></i>';
+                if (half) html += '<i class="fas fa-star-half-alt"></i>';
+                const empty = 5 - full - half;
+                for (let i = 0; i < empty; i++) html += '<i class="fas fa-star empty"></i>';
+                return html;
+            }
+
+            function getCategorySet() {
+                const set = new Set();
+                companies.forEach(c => set.add(c.category));
+                return Array.from(set).sort();
+            }
+
+            function populateCategoryFilter() {
+                const cats = getCategorySet();
+                categoryFilter.innerHTML = '<option value="all">Semua</option>';
+                cats.forEach(cat => {
+                    const opt = document.createElement('option');
+                    opt.value = cat;
+                    opt.textContent = cat;
+                    categoryFilter.appendChild(opt);
+                });
+            }
+
+            // ----------------------------------------------
+            // FILTER & SORT
+            // ----------------------------------------------
+            function getFilteredAndSorted() {
+                const search = searchInput.value.toLowerCase().trim();
+                const category = categoryFilter.value;
+                const sortKey = sortSelect.value;
+
+                let result = companies.filter(c => {
+                    const matchSearch = c.name.toLowerCase().includes(search) ||
+                        c.category.toLowerCase().includes(search) ||
+                        c.location.toLowerCase().includes(search);
+                    const matchCategory = category === 'all' || c.category === category;
+                    return matchSearch && matchCategory;
+                });
+
+                // sort
+                if (sortKey === 'distance') {
+                    result.sort((a, b) => a.distance - b.distance);
+                } else if (sortKey === 'rating') {
+                    result.sort((a, b) => b.rating - a.rating);
+                } else if (sortKey === 'name') {
+                    result.sort((a, b) => a.name.localeCompare(b.name));
+                } else if (sortKey === 'category') {
+                    result.sort((a, b) => a.category.localeCompare(b.category));
+                }
+                return result;
+            }
+
+            // ----------------------------------------------
+            // RENDER TABLE
+            // ----------------------------------------------
+            function renderTable() {
+                const data = getFilteredAndSorted();
+                if (data.length === 0) {
+                    tableBody.innerHTML = `
+                            <tr>
+                                <td colspan="7" class="no-data">
+                                    <i class="fas fa-search"></i>
+                                    Tidak ada perusahaan yang cocok dengan pencarian.
+                                </td>
+                            </tr>
+                        `;
+                    resultCountBadge.textContent = '0';
+                    return;
+                }
+
+                let html = '';
+                data.forEach((c, idx) => {
+                    const contactHtml = c.email !== '–' || c.phone !== '–' ?
+                        `<div class="contact-info">
+                                ${c.email !== '–' ? `<div><i class="fas fa-envelope"></i> ${c.email}</div>` : ''}
+                                ${c.phone !== '–' ? `<div><i class="fas fa-phone"></i> ${c.phone}</div>` : ''}
+                            </div>` :
+                        '<span class="text-muted">–</span>';
+
+                    const webHtml = c.website !== '–' ?
+                        `<a href="https://${c.website}" target="_blank" class="website-link"><i class="fas fa-globe"></i> ${c.website}</a>` :
+                        '<span class="text-muted">–</span>';
+
+                    html += `
+                            <tr>
+                                <td>${c.no}</td>
+                                <td><span class="company-cell">${c.name}</span></td>
+                                <td><span class="category-tag">${c.category}</span></td>
+                                <td style="font-size:0.78rem;">${c.location}</td>
+                                <td><span class="dist">${c.distance} km</span></td>
+                                <td><span class="stars-sm">${renderStarsSmall(c.rating)}</span></td>
+                                <td>
+                                    ${contactHtml}
+                                    <div style="margin-top:4px;">${webHtml}</div>
+                                </td>
+                            </tr>
+                        `;
+                });
+
+                tableBody.innerHTML = html;
+                resultCountBadge.textContent = data.length;
+
+                // update stats
+                totalCount.textContent = companies.length;
+                const avgR = (companies.reduce((s, c) => s + c.rating, 0) / companies.length);
+                avgRating.textContent = avgR.toFixed(1);
+                const avgD = (companies.reduce((s, c) => s + c.distance, 0) / companies.length);
+                avgDist.textContent = avgD.toFixed(1);
+            }
+
+            // ----------------------------------------------
+            // RENDER TOP 25
+            // ----------------------------------------------
+            function renderTop25() {
+                let html = '';
+                top25Data.forEach((c, idx) => {
+                    const reason = reasons[c.no] || 'Perusahaan terkemuka dengan reputasi solid.';
+                    html += `
+                            <div class="top25-card">
+                                <div class="rank">${idx + 1}</div>
+                                <div class="company-name">${c.name}</div>
+                                <div class="company-cat"><i class="fas fa-tag"></i> ${c.category}</div>
+                                <div class="meta">
+                                    <span><i class="fas fa-map-pin"></i> ${c.distance} km</span>
+                                    <span class="stars">${renderStars(c.rating)}</span>
+                                    <span style="font-weight:600;color:#0b2b4a;">${c.rating.toFixed(1)}</span>
+                                </div>
+                                <div class="reason">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>${reason}</span>
+                                </div>
+                            </div>
+                        `;
+                });
+                top25Grid.innerHTML = html;
+            }
+
+            // ----------------------------------------------
+            // EVENT BINDING
+            // ----------------------------------------------
+            searchInput.addEventListener('input', renderTable);
+            sortSelect.addEventListener('change', renderTable);
+            categoryFilter.addEventListener('change', renderTable);
+
+            resetBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                sortSelect.value = 'distance';
+                categoryFilter.value = 'all';
+                renderTable();
+            });
+
+            // ----------------------------------------------
+            // INIT
+            // ----------------------------------------------
+            populateCategoryFilter();
+            renderTop25();
+            renderTable();
+
+        })();
+    </script>
+
+</body>
+</html>
